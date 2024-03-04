@@ -40,13 +40,12 @@
                 </ul>
                 <form class="d-flex gap-3 flex-column flex-lg-row " role="search">
                     <div class="position-relative ">
-                        <input class="form-control me-2 rounded-5 searchBox" type="search"
-                            placeholder="Search Products..." aria-label="Search">
+                        <input class="form-control me-2 rounded-5 searchBox" placeholder="Search Products...">
                         <img src="./images/navbar/search.svg" alt="search" class="position-absolute searchIcon">
                     </div>
                     <div class="d-flex gap-3">
-                        <img src="./images/navbar/addUser.svg" alt="addUser">
-                        <img src="./images/navbar/bag.svg" alt="bag">
+                        <img src="./images/navbar/addUser.svg" alt="addUser" class="addUser">
+                        <img src="./images/navbar/bag.svg" alt="bag" class="bag">
                     </div>
                 </form>
             </div>
@@ -82,32 +81,13 @@
     </section>
 
     <section class="container my-5">
-        <h2 class="text-center my-5">Plant Collection</h2>
+        <h2 class="text-center my-5 sectionHeading">Plant Collection</h2>
         <div class="collectionContent d-flex flex-column flex-md-row  justify-content-center gap-5 gap-md-2 ">
-            <div class="d-flex flex-row gap-3 overflow-scroll m-auto">
-                <div class="flex-shrink-0 ">
-                    <div class="plantCollectionImage mb-4">
-                        <img src="./images/plantCollection/paradise.png" alt="paradiseFlower">
-                    </div>
-                    <span>Bird of paradise</span>
-                </div>
-                <div class="flex-shrink-0 ">
-                    <div class="plantCollectionImage mb-4">
-                        <img src="./images/plantCollection/rubber.png" alt="rubberPlant">
-                    </div>
-                    <span>Rubber plants</span>
-                </div>
-                <div class="flex-shrink-0 ">
-                    <div class="plantCollectionImage mb-4">
-                        <img src="./images/plantCollection/pearls.png" alt="pearl">
-                    </div>
-                    <span>String of pearls</span>
-                </div>
+            <div class="d-flex flex-row gap-3 overflow-scroll m-auto plantCollectionCarousel">
             </div>
             <div class="my-auto mx-auto mx-md-3 d-flex flex-row flex-md-column gap-5 gap-md-2 order-0 order-md-1">
-                <span class="carouselMover px-3 py-2 order-1 order-md-0">></span>
-                <span class="carouselMover px-3 py-2">
-                    < </span>
+                <span class="carouselMover plantCarouselForward px-3 py-2 order-1 order-md-0">></span>
+                <span class="carouselMover  plantCarouselBackward px-3 py-2"> < </span>
             </div>
         </div>
     </section>
@@ -116,13 +96,14 @@
         <div class="position-absolute start-0 journeyLeaves">
             <img src="./images/ourJourney/leaves.svg" alt="leaves">
         </div>
-        <div class="d-flex justify-content-around flex-wrap align-items-center ">
+        <div class="d-flex flex-column flex-lg-row px-sm-2 px-lg-0 justify-content-around align-items-center ">
             <div class="journeyPlant mx-auto mb-5 mb-lg-0">
                 <img src="./images/ourJourney/plant.png" alt="plant">
             </div>
-            <div class="journeyContent mx-auto ">
-                <h2>Our journey</h2>
-                <p class="my-5">It is a long established fact that a reader will be distracted by the readable content
+            <div class="journeyContent me-auto">
+                <h2 class="sectionHeading">Our journey</h2>
+                <p class="my-5 content">It is a long established fact that a reader will be distracted by the readable
+                    content
                     of a page when
                     It is a long .It is a long established fact that a reader will be distracted by the readable content
                     of a is simply.</p>
@@ -136,33 +117,33 @@
 
     <section class="advantagesSection position-relative ">
         <div class="container">
-            <h2>Our advantages</h2>
+            <h2 class="sectionHeading">Our advantages</h2>
             <div class="d-flex flex-column flex-lg-row gap-5 my-5">
-                <div class="advantagesCard d-flex gap-3 p-4">
-                    <div class="cardImage my-auto ">
+                <div class="advantagesCard d-flex gap-3 p-4 border">
+                    <div class="cardImage my-auto">
                         <img src="./images/ourAdvantage/easyOrder.svg" alt="easyOrder">
                     </div>
                     <div>
-                        <h3>Easy order</h3>
-                        <p>It is a long established fact that a reader will be.</p>
+                        <h3 class="cardHeading">Easy order</h3>
+                        <p class="cardContent">It is a long established fact that a reader will be.</p>
                     </div>
                 </div>
-                <div class="advantagesCard d-flex gap-3 p-4">
+                <div class="advantagesCard d-flex gap-3 p-4 border">
                     <div class="cardImage my-auto ">
                         <img src="./images/ourAdvantage/fastDelivery.svg" alt="fastDelivery">
                     </div>
                     <div>
-                        <h3>Fast Delivery</h3>
-                        <p>It is a long established fact that a reader will be.</p>
+                        <h3 class="cardHeading">Fast Delivery</h3>
+                        <p class="cardContent">It is a long established fact that a reader will be.</p>
                     </div>
                 </div>
-                <div class="advantagesCard d-flex gap-3 p-4">
+                <div class="advantagesCard d-flex gap-3 p-4 border">
                     <div class="cardImage my-auto ">
                         <img src="./images/ourAdvantage/easyOrderRight.svg" alt="easyOrder">
                     </div>
                     <div>
-                        <h3>Easy order</h3>
-                        <p>It is a long established fact that a reader will be.</p>
+                        <h3 class="cardHeading">Easy order</h3>
+                        <p class="cardContent">It is a long established fact that a reader will be.</p>
                     </div>
                 </div>
             </div>
@@ -170,12 +151,12 @@
     </section>
 
     <section class="form-section my-5 position-relative">
-        <div class="d-flex flex-column flex-lg-row">
-            <div class="formImage">
+        <div class="d-flex flex-column flex-lg-row ">
+            <div class="formImage mx-auto">
                 <img src="./images/form/plants.png" alt="plants">
             </div>
-            <div class="d-flex flex-column justify-content-between  formContainer my-auto">
-                <h2 class="mb-3">Ask us anything</h2>
+            <div class="d-flex flex-column justify-content-between  formContainer my-auto border mx-auto">
+                <h2 class="mb-3 sectionHeading">Ask us anything</h2>
                 <input type="text" placeholder="name">
                 <input type="text" placeholder="phone">
                 <input type="text" placeholder="email">
@@ -194,6 +175,123 @@
             <img src="./images/form/leaves.png" alt="leaves">
         </div>
 
+    </section>
+
+    <section class="choosingSection container my-5">
+        <h2 class="sectionHeading text-center ">Choosing the right plant</h2>
+
+        <div class="d-flex flex-column flex-lg-row gap-5 my-5">
+            <div class="p-4 border choosingCard">
+                <div class="my-auto choosingImage">
+                    <img src="./images/choosingPlant/garden.svg" alt="gardenPlant" class="whitePlant">
+                    <img src="./images/choosingPlant/gardenGreen.svg" alt="gardenPlant" class="greenPlant">
+                </div>
+                <div>
+                    <h3 class="cardHeading choosingCardFont">Garden plants</h3>
+                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be distracted by the .</p>
+                </div>
+            </div>
+            <div class="p-4 border choosingCard">
+                <div class="my-auto choosingImage">
+                    <img src="./images/choosingPlant/indoor.svg" alt="indoorPlants" class="whitePlant">
+                    <img src="./images/choosingPlant/indoorGreen.svg" alt="indoorPlants" class="greenPlant">
+                </div>
+                <div>
+                    <h3 class="cardHeading choosingCardFont">Indoor plants</h3>
+                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be distracted by the .</p>
+                </div>
+            </div>
+            <div class="p-4 border choosingCard">
+                <div class="my-auto  choosingImage">
+                    <img src="./images/choosingPlant/home.svg" alt="homePlants" class="whitePlant">
+                    <img src="./images/choosingPlant/homeGreen.svg" alt="homePlants" class="greenPlant">
+                </div>
+                <div>
+                    <h3 class="cardHeading choosingCardFont">Home plants</h3>
+                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be distracted by the .</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="sectionHeading">What clients talk about us</h2>
+
+    </section>
+
+    <section class="plantCare position-relative my-5">
+        <div class="row m-0 ">
+            <div class="col-12 col-lg-4 my-auto plantCareContent order-1 order-lg-0">
+                <h2 class="sectionHeading mt-3 mt-lg-0">Plant Care</h2>
+                <p class="content my-5">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when
+                    It is a long .It is a long established fact that a reader will be distracted by the readable content
+                    of a is simply.
+                    a page when It is a long .It is a long established fact that a reader will be distracted by the
+                    readable content of a is simply.
+                </p>
+                <button class="btn greenButton">Read the blog</button>
+            </div>
+            <div class="col-12 col-lg-6 plantCareImage ms-auto p-0 order-0 order-lg-1 ">
+                <img src="./images/plantCare/video.png" alt="video">
+            </div>
+        </div>
+        <div class="position-absolute plantCareLeaves">
+            <img src="./images/plantCare/leaves.png" alt="leave">
+        </div>
+    </section>
+
+    <section class="footer-section container-fluid d-flex flex-column gap-3 mt-5 pt-3">
+        <div class="footer-content row m-0 px-5">
+            <div class="nuvosa col-12 col-lg-6 d-flex flex-column gap-3">
+                <h2 class="footerNuvosa">nuvosa</h2>
+                <p class="cardContent">It is a long established fact that a reader will be
+                    distracted by the readable content of a page when It
+                    is a long. It is a long established fact that a reader will be distracted by the.</p>
+                <div class="footerSocialMedia">
+                    <img src="./images/footer/instagram.svg" alt="Instagram">
+                    <img src="./images/footer/facebook.svg" alt="Facebook">
+                    <img src="./images/footer/youtube.svg" alt="Youtube">
+                    <img src="./images/footer/twitter.svg" alt="Twitter">
+                </div>
+            </div>
+            <div class=" col-12 col-lg-6 row mt-4 ms-auto">
+                <div class="service col-12 col-sm-4 d-flex flex-column ">
+                    <h3 class="footerCategoryName mb-4">Service</h3>
+                    <a href="#" class="cardContent">Gardening</a>
+                    <a href="#" class="cardContent">Lawn Service</a>
+                    <a href="#" class="cardContent">Leaf removal</a>
+                    <a href="#" class="cardContent">Decoration</a>
+                    <a href="#" class="cardContent">Trimming</a>
+                </div>
+                <div class="support col-12 col-sm-4 d-flex flex-column mt-3 mt-sm-0">
+                    <h3 class="footerCategoryName mb-4">Support</h3>
+                    <a href="#" class="cardContent">Gardening</a>
+                    <a href="#" class="cardContent">Lawn Service</a>
+                    <a href="#" class="cardContent">Leaf removal</a>
+                    <a href="#" class="cardContent">Decoration</a>
+                    <a href="#" class="cardContent">Trimming</a>
+                </div>
+                <div class="company col-12 col-sm-4 d-flex flex-column mt-3 mt-sm-0">
+                    <h3 class="footerCategoryName mb-4">Company</h3>
+                    <a href="#" class="cardContent">Gardening</a>
+                    <a href="#" class="cardContent">Lawn Service</a>
+                    <a href="#" class="cardContent">Leaf removal</a>
+                    <a href="#" class="cardContent">Decoration</a>
+                    <a href="#" class="cardContent">Trimming</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div
+            class="copyright-section d-flex flex-column flex-md-row justify-content-md-between align-items-center px-5 my-3">
+            <p class="footerBottomText">Copyright &copy; 2023 Nuvosa, All Right Reserved.</p>
+            <div class="d-flex gap-3 align-items-center me-5 flex-wrap">
+                <a href="#" class="footerBottomText">Terms of Use</a>
+                <a href="#" class="footerBottomText">Copyright & Trademark</a>
+                <a href="#" class="footerBottomText">Policy</a>
+            </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

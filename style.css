@@ -11,6 +11,38 @@
   color: white !important;
 }
 
+a {
+  text-decoration: none;
+}
+
+.sectionHeading {
+  font-family: Playfair;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #09270d;
+}
+
+.cardHeading {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #09270d;
+}
+
+.cardContent {
+  font-family: Poppins;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #727272;
+}
+
+.content {
+  font-family: Playfair;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #727272;
+}
+
 .brandName {
   font-family: Playfair;
   font-size: 1.7rem;
@@ -27,7 +59,7 @@
 }
 
 .searchBox {
-  padding: 0 auto !important;
+  outline: none !important;
 }
 .searchBox::-moz-placeholder {
   color: #c0c0c0;
@@ -42,6 +74,10 @@
   top: 8px;
   right: 13px;
   width: 20px;
+}
+
+.addUser:hover, .bag:hover {
+  cursor: pointer;
 }
 
 .heroHeading {
@@ -73,6 +109,13 @@
 .sliderContainer img {
   margin-top: 60px;
   width: 700px;
+}
+
+.collectionImageHeading {
+  font-family: Playfair;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #09270d;
 }
 
 .collectionContent div {
@@ -112,7 +155,7 @@
 }
 
 .journeyContent {
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .journeySidePlant {
@@ -143,7 +186,7 @@
 
 .formContainer {
   background-color: #faf9f7;
-  height: 600px;
+  height: 550px;
   width: 100%;
   padding: 20px;
 }
@@ -164,12 +207,77 @@
 }
 
 .formLeaves {
+  display: none;
   bottom: -40px;
   width: 200px;
 }
 .formLeaves img {
   width: 100%;
   height: 100%;
+}
+
+.choosingImage {
+  border-radius: 50%;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: #3e8847;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choosingImage .greenPlant {
+  display: none;
+}
+
+.choosingCard:hover {
+  cursor: pointer;
+  background-color: #3e8847;
+}
+.choosingCard:hover .greenPlant {
+  display: block;
+}
+.choosingCard:hover .whitePlant {
+  display: none;
+}
+.choosingCard:hover .choosingImage {
+  background-color: white;
+}
+.choosingCard:hover .choosingCardFont {
+  color: white;
+}
+
+.plantCareImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-section {
+  background-image: url(./images/footer/background.png);
+}
+
+.footerNuvosa {
+  font-family: poppins;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #d0d6c9;
+}
+
+.footerCategoryName {
+  font-family: poppins;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #d0d6c9;
+}
+
+.footerBottomText {
+  font-family: poppins;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #B0BAA3;
+}
+
+.footerSocialMedia img:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 576px) {
@@ -203,14 +311,28 @@
   }
 }
 @media (min-width: 998px) {
+  .journeyContent {
+    margin-top: 6rem !important;
+    max-width: 500px;
+  }
   .formContainer {
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     padding: 80px;
-    margin-left: -100px !important;
-    width: 800px;
+    margin-left: -50px !important;
+    width: 750px;
   }
   .formImage {
-    height: 700px;
+    height: 640px;
+  }
+  .formLeaves {
+    display: block;
+  }
+  .plantCareContent {
+    margin-left: 7rem;
+  }
+  .plantCareLeaves {
+    left: 16rem;
+    bottom: -4rem;
   }
 }/*# sourceMappingURL=style.css.map */
