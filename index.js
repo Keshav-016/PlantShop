@@ -2,7 +2,29 @@ const heroCarouselContainer = document.querySelector('.sliderContainer');
 const plantCollectionContainer = document.querySelector('.plantCollectionCarousel');
 const plantCarouselForward = document.querySelector('.plantCarouselForward');
 const plantCarouselBackward = document.querySelector('.plantCarouselBackward');
-const heroImageAddress = ['plant.png', 'plant.png', 'plant.png'];
+const heroLeftSlider = document.querySelector('.heroLeftSlider');
+const heroRightSlider = document.querySelector('.heroRightSlider');
+const heroSlider = document.querySelectorAll('.heroSlider');
+const clientCard = document.querySelectorAll('.clientTalkCard');
+let heroCurrentIndex = 0;
+let clientCardIndex = 0;
+
+
+const heroImageAddress = [
+    {
+        img: "./images/heroSection/plant.png"
+    },
+    {
+        img: "./images/heroSection/leave.avif"
+    },
+    {
+        img: "./images/heroSection/greenLeave.avif"
+    },
+    {
+        img: "./images/heroSection/longGrass.avif"
+    },
+];
+
 const plantCollectionData = [
     {
         text: "Bird of paradise",
@@ -22,17 +44,46 @@ const plantCollectionData = [
     },
 ];
 
+function updateHeroCarousel(heroCarouselImage, heroCurrentIndex) {
+    heroCarouselImage.forEach((item) => {
+        item.style.height = "38rem";
+        item.style.transform = `translateX(-${100 * heroCurrentIndex}%)`;
+        item.style.marginRight = `0`;
+        item.style.zIndex = 0;
+    });
+    heroCarouselImage[heroCurrentIndex].style.marginRight = `-80px`;
+    heroCarouselImage[heroCurrentIndex].style.height = "32rem";
+    heroCarouselImage[heroCurrentIndex].style.zIndex = 2;
+}
+
 
 heroImageAddress.forEach((element) => {
     const carouselImage = document.createElement('img');
-    carouselImage.setAttribute('src', `./images/heroSection/${element}`);
+    carouselImage.setAttribute('class', 'heroCarouselImage')
+    carouselImage.setAttribute('src', `${element.img}`);
     heroCarouselContainer.appendChild(carouselImage);
+})
+
+const heroCarouselImage = document.querySelectorAll('.heroCarouselImage')
+updateHeroCarousel(heroCarouselImage, heroCurrentIndex);
+
+heroRightSlider.addEventListener('click', () => {
+    heroSlider[heroCurrentIndex].style.backgroundColor="#92B896"
+    heroCurrentIndex = (heroCurrentIndex + 1) % heroImageAddress.length;
+    heroSlider[heroCurrentIndex].style.backgroundColor="#3E8646"
+    updateHeroCarousel(heroCarouselImage, heroCurrentIndex)
+})
+
+heroLeftSlider.addEventListener('click', () => {
+    heroCurrentIndex = (heroCurrentIndex - 1 + heroImageAddress.length) % heroImageAddress.length;
+    heroSlider[heroCurrentIndex].style.backgroundColor="#92B896";
+    updateHeroCarousel(heroCarouselImage, heroCurrentIndex);
+    heroSlider[heroCurrentIndex].style.backgroundColor="#3E8646";
 })
 
 function createPlantCarousel() {
     plantCollectionData.forEach((element) => {
         const container = document.createElement('div');
-        container.setAttribute('class', 'flex-shrink-0')
         const imageContainer = document.createElement('div');
         imageContainer.setAttribute('class', 'plantCollectionImage mb-4')
         const carouselImage = document.createElement('img');
@@ -49,22 +100,23 @@ function createPlantCarousel() {
 
 createPlantCarousel()
 
-setInterval(()=>{
-    let lastImage = plantCollectionData.shift();
-    plantCollectionData.push(lastImage);
-    plantCollectionContainer.innerHTML='';
-    createPlantCarousel();
-},2000)
+setInterval(() => {
+    clientCard.forEach((item)=>{
+        item.style.transform=`translateX(-${100 * clientCardIndex}%)`;
+    })
+    clientCardIndex = (clientCardIndex+1) % 3;
+}, 2000)
 
-plantCarouselBackward.addEventListener('click',(item)=>{
+plantCarouselBackward.addEventListener('click', (item) => {
     let lastImage = plantCollectionData.shift();
     plantCollectionData.push(lastImage);
-    plantCollectionContainer.innerHTML='';
+    plantCollectionContainer.innerHTML = '';
     createPlantCarousel();
 });
-plantCarouselForward.addEventListener('click',(item)=>{
+
+plantCarouselForward.addEventListener('click', (item) => {
     let lastImage = plantCollectionData.pop();
     plantCollectionData.unshift(lastImage);
-    plantCollectionContainer.innerHTML='';
+    plantCollectionContainer.innerHTML = '';
     createPlantCarousel();
 })

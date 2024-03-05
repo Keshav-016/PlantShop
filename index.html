@@ -23,19 +23,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbarLink">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SHOP</a>
+                        <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PLANTS</a>
+                        <a class="nav-link" href="#">Plants</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">DELIVERY</a>
+                        <a class="nav-link" href="#">Delivery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HELP</a>
+                        <a class="nav-link" href="#">Help</a>
                     </li>
                 </ul>
                 <form class="d-flex gap-3 flex-column flex-lg-row " role="search">
@@ -54,45 +54,61 @@
 
     <!-- hero section  -->
 
-    <section class="container-fluid position-relative d-flex flex-column  align-items-end ">
-        <div class="heroContent d-flex flex-column gap-5 position-absolute ">
-            <div>
-                <img src="./images/heroSection/line.svg" alt="line">
-                <span>Love nature</span>
-                <img src="./images/heroSection/leaf.svg" alt="leaf" class="position-absolute  heroLeaf">
+    <section class="container-fluid mt-0 mt-md-5 px-0">
+        <div class="d-flex  align-items-center heroContainer">
+            <div class="heroContent d-flex flex-column gap-5 z-2">
+                <div>
+                    <img src="./images/heroSection/line.svg" alt="line">
+                    <span>Love nature</span>
+                    <img src="./images/heroSection/leaf.svg" alt="leaf" class="position-absolute  heroLeaf">
+                </div>
+                <h1 class="heroHeading">Take a new friend to your home</h1>
+                <div class="d-flex gap-3">
+                    <button class="btn btn-close-white  rounded-5 border border-dark px-4">Plant Care</button>
+                    <button class="btn rounded-5 px-4 greenButton">Buy a plant</button>
+                </div>
             </div>
-            <h1 class="heroHeading">Take a new friend to your home</h1>
-            <div class="d-flex gap-3">
-                <button class="btn btn-close-white  rounded-5 border border-dark px-4 px-sm-5">Plant Care</button>
-                <button class="btn rounded-5 px-4 px-sm-5 greenButton">Buy a plant</button>
-            </div>
-        </div>
-        <div class="sliderContainer d-flex gap-3">
+            <div class="sliderContainer d-flex align-items-center overflow-hidden z-0">
 
+            </div>
         </div>
-        <!-- <div class="heroIcon">
-            <div>
+        <div class="d-flex flex-row heroCarouselButton">
+            <div class="d-flex gap-5">
                 <img src="./images/heroSection/facebook.svg" alt="facebook">
                 <img src="./images/heroSection/instagram.svg" alt="instagram">
                 <img src="./images/heroSection/pintrest.svg" alt="pintrest">
             </div>
-        </div> -->
-
-    </section>
-
-    <section class="container my-5">
-        <h2 class="text-center my-5 sectionHeading">Plant Collection</h2>
-        <div class="collectionContent d-flex flex-column flex-md-row  justify-content-center gap-5 gap-md-2 ">
-            <div class="d-flex flex-row gap-3 overflow-scroll m-auto plantCollectionCarousel">
-            </div>
-            <div class="my-auto mx-auto mx-md-3 d-flex flex-row flex-md-column gap-5 gap-md-2 order-0 order-md-1">
-                <span class="carouselMover plantCarouselForward px-3 py-2 order-1 order-md-0">></span>
-                <span class="carouselMover  plantCarouselBackward px-3 py-2"> < </span>
+            <div class="m-auto d-flex">
+                <button class="btn heroLeftSlider"><img src="./images/heroSection/leftArrow.svg"
+                        alt="leftArrow"></button>
+                <p class="d-flex my-auto">
+                    <span class="px-3">1</span>
+                    <span class="heroSlider heroSliderSelected my-auto "></span>
+                    <span class="heroSlider my-auto"></span>
+                    <span class="heroSlider my-auto"></span>
+                    <span class="heroSlider my-auto"></span>
+                    <span class="px-3">4</span>
+                </p>
+                <button class="btn heroRightSlider"><img src="./images/heroSection/rightArrow.svg"
+                        alt="rightArrow"></button>
             </div>
         </div>
     </section>
 
-    <section class="journeySection my-5 position-relative">
+    <section class="container sectionGap">
+        <h2 class="text-center my-5 sectionHeading">Plant Collection</h2>
+        <div class="collectionContent d-flex flex-column flex-md-row  justify-content-center gap-5 gap-md-2 ">
+            <div class="d-flex flex-row gap-4 overflow-scroll plantCollectionCarousel">
+            </div>
+            <div class="my-auto mx-auto mx-md-3 d-flex flex-row flex-md-column gap-5 gap-md-2 order-0 order-md-1">
+                <span class="carouselMover plantCarouselForward px-3 py-2 order-1 order-md-0">></span>
+                <span class="carouselMover  plantCarouselBackward px-3 py-2">
+                    < </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="journeySection position-relative sectionGap">
         <div class="position-absolute start-0 journeyLeaves">
             <img src="./images/ourJourney/leaves.svg" alt="leaves">
         </div>
@@ -100,9 +116,9 @@
             <div class="journeyPlant mx-auto mb-5 mb-lg-0">
                 <img src="./images/ourJourney/plant.png" alt="plant">
             </div>
-            <div class="journeyContent me-auto">
+            <div class="journeyContent me-auto px-2 px-sm-0">
                 <h2 class="sectionHeading">Our journey</h2>
-                <p class="my-5 content">It is a long established fact that a reader will be distracted by the readable
+                <p class="my-5 content ">It is a long established fact that a reader will be distracted by the readable
                     content
                     of a page when
                     It is a long .It is a long established fact that a reader will be distracted by the readable content
@@ -115,7 +131,7 @@
         </div>
     </section>
 
-    <section class="advantagesSection position-relative ">
+    <section class="advantagesSection position-relative sectionGap">
         <div class="container">
             <h2 class="sectionHeading">Our advantages</h2>
             <div class="d-flex flex-column flex-lg-row gap-5 my-5">
@@ -150,7 +166,7 @@
         </div>
     </section>
 
-    <section class="form-section my-5 position-relative">
+    <section class="form-section position-relative sectionGap">
         <div class="d-flex flex-column flex-lg-row ">
             <div class="formImage mx-auto">
                 <img src="./images/form/plants.png" alt="plants">
@@ -177,51 +193,134 @@
 
     </section>
 
-    <section class="choosingSection container my-5">
+    <section class="choosingSection container sectionGap">
         <h2 class="sectionHeading text-center ">Choosing the right plant</h2>
 
         <div class="d-flex flex-column flex-lg-row gap-5 my-5">
             <div class="p-4 border choosingCard">
-                <div class="my-auto choosingImage">
+                <div class="my-auto choosingImage mb-3">
                     <img src="./images/choosingPlant/garden.svg" alt="gardenPlant" class="whitePlant">
                     <img src="./images/choosingPlant/gardenGreen.svg" alt="gardenPlant" class="greenPlant">
                 </div>
                 <div>
                     <h3 class="cardHeading choosingCardFont">Garden plants</h3>
-                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be distracted by the .</p>
+                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be
+                        distracted by the .</p>
                 </div>
             </div>
             <div class="p-4 border choosingCard">
-                <div class="my-auto choosingImage">
+                <div class="my-auto choosingImage mb-3">
                     <img src="./images/choosingPlant/indoor.svg" alt="indoorPlants" class="whitePlant">
                     <img src="./images/choosingPlant/indoorGreen.svg" alt="indoorPlants" class="greenPlant">
                 </div>
                 <div>
                     <h3 class="cardHeading choosingCardFont">Indoor plants</h3>
-                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be distracted by the .</p>
+                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be
+                        distracted by the .</p>
                 </div>
             </div>
             <div class="p-4 border choosingCard">
-                <div class="my-auto  choosingImage">
+                <div class="my-auto  choosingImage mb-3">
                     <img src="./images/choosingPlant/home.svg" alt="homePlants" class="whitePlant">
                     <img src="./images/choosingPlant/homeGreen.svg" alt="homePlants" class="greenPlant">
                 </div>
                 <div>
                     <h3 class="cardHeading choosingCardFont">Home plants</h3>
-                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be distracted by the .</p>
+                    <p class="cardContent choosingCardFont">It is a long established fact that a reader will be
+                        distracted by the .</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container my-5">
-        <h2 class="sectionHeading">What clients talk about us</h2>
+    <section class="container sectionGap">
+        <h2 class="sectionHeading my-5">What clients talk about us</h2>
+        <div class="d-flex overflow-x-scroll overflow-y-hidden gap-5 ps-5 clientCardContainer">
+            <div class="d-flex gap-5 clientTalkCard">
+                <div class="my-auto playButton">
+                    <img src="./images/clientTalk/playButton.svg" alt="playButton">
+                </div>
+                <div
+                    class="clientCard border d-flex flex-column flex-md-row flex-shrink-0 gap-0 gap-md-3 position-relative">
+                    <div class="clientCardImage mx-auto mt-4">
+                        <img src="./images//clientTalk/client.png" alt="client">
+                    </div>
+                    <p class=" p-5 pb-3 ps-3 cardContent">It is a long established fact that a reader will be distracted
+                        by
+                        the
+                        readable content of a page when
+                        It is a long .It is a long .It is a long established fact that a reader will be . It is a long
+                        established fact that a reader .
+                    </p>
+                    <img src="./images/clientTalk/openQuote.svg" alt="openQuote"
+                        class="position-absolute openQuote quoteGreen">
+                    <img src="./images/clientTalk/closeQuote.svg" alt="closeQuote"
+                        class="position-absolute closeQuote quoteGreen">
+                    <img src="./images/clientTalk/openQuoteWhite.svg" alt="openQuoteWhite"
+                        class="position-absolute openQuote quoteWhite">
+                    <img src="./images/clientTalk/closeQuoteWhite.svg" alt="closeQuoteWhite"
+                        class="position-absolute closeQuote quoteWhite">
+                </div>
+            </div>
+            <div class="d-flex gap-5 clientTalkCard">
+                <div class="my-auto playButton">
+                    <img src="./images/clientTalk/playButton.svg" alt="playButton">
+                </div>
+                <div
+                    class="clientCard border d-flex flex-column flex-md-row flex-shrink-0 gap-0 gap-md-3 position-relative">
+                    <div class="clientCardImage mx-auto mt-4">
+                        <img src="./images//clientTalk/client.png" alt="client">
+                    </div>
+                    <p class=" p-5 pb-3 ps-3 cardContent">It is a long established fact that a reader will be distracted
+                        by
+                        the
+                        readable content of a page when
+                        It is a long .It is a long .It is a long established fact that a reader will be . It is a long
+                        established fact that a reader .
+                    </p>
+                    <img src="./images/clientTalk/openQuote.svg" alt="openQuote"
+                        class="position-absolute openQuote quoteGreen">
+                    <img src="./images/clientTalk/closeQuote.svg" alt="closeQuote"
+                        class="position-absolute closeQuote quoteGreen">
+                    <img src="./images/clientTalk/openQuoteWhite.svg" alt="openQuoteWhite"
+                        class="position-absolute openQuote quoteWhite">
+                    <img src="./images/clientTalk/closeQuoteWhite.svg" alt="closeQuoteWhite"
+                        class="position-absolute closeQuote quoteWhite">
+                </div>
+            </div>
+            <div class="d-flex gap-5 clientTalkCard">
+                <div class="my-auto playButton">
+                    <img src="./images/clientTalk/playButton.svg" alt="playButton">
+                </div>
+                <div
+                    class="clientCard border d-flex flex-column flex-md-row flex-shrink-0 gap-0 gap-md-3 position-relative">
+                    <div class="clientCardImage mx-auto mt-4">
+                        <img src="./images//clientTalk/client.png" alt="client">
+                    </div>
+                    <p class=" p-5 pb-3 ps-3 cardContent">It is a long established fact that a reader will be distracted
+                        by
+                        the readable
+                        content of a page when
+                        It is a long .It is a long .It is a long established fact that a reader will be . It is a long
+                        established fact that a reader .
+                    </p>
+                    <img src="./images/clientTalk/openQuote.svg" alt="openQuote"
+                        class="position-absolute openQuote quoteGreen">
+                    <img src="./images/clientTalk/closeQuote.svg" alt="closeQuote"
+                        class="position-absolute closeQuote quoteGreen">
+                    <img src="./images/clientTalk/openQuoteWhite.svg" alt="openQuoteWhite"
+                        class="position-absolute openQuote quoteWhite">
+                    <img src="./images/clientTalk/closeQuoteWhite.svg" alt="closeQuoteWhite"
+                        class="position-absolute closeQuote quoteWhite">
+                </div>
+            </div>
+        </div>
 
     </section>
 
-    <section class="plantCare position-relative my-5">
+    <section class="plantCare position-relative sectionGap">
         <div class="row m-0 ">
-            <div class="col-12 col-lg-4 my-auto plantCareContent order-1 order-lg-0">
+            <div class="col-12 col-lg-5 my-auto plantCareContent order-1 order-lg-0">
                 <h2 class="sectionHeading mt-3 mt-lg-0">Plant Care</h2>
                 <p class="content my-5">It is a long established fact that a reader will be distracted by the readable
                     content of a page when
@@ -230,7 +329,7 @@
                     a page when It is a long .It is a long established fact that a reader will be distracted by the
                     readable content of a is simply.
                 </p>
-                <button class="btn greenButton">Read the blog</button>
+                <button class="btn greenButton rounded-5 px-4">Read the blog</button>
             </div>
             <div class="col-12 col-lg-6 plantCareImage ms-auto p-0 order-0 order-lg-1 ">
                 <img src="./images/plantCare/video.png" alt="video">
@@ -241,7 +340,7 @@
         </div>
     </section>
 
-    <section class="footer-section container-fluid d-flex flex-column gap-3 mt-5 pt-3">
+    <section class="footer-section container-fluid d-flex flex-column gap-3 pt-3 sectionGap">
         <div class="footer-content row m-0 px-5">
             <div class="nuvosa col-12 col-lg-6 d-flex flex-column gap-3">
                 <h2 class="footerNuvosa">nuvosa</h2>
@@ -284,7 +383,7 @@
         </div>
         <hr>
         <div
-            class="copyright-section d-flex flex-column flex-md-row justify-content-md-between align-items-center px-5 my-3">
+            class="copyright-section d-flex flex-column flex-md-row justify-content-md-between align-items-center px-5 mb-3">
             <p class="footerBottomText">Copyright &copy; 2023 Nuvosa, All Right Reserved.</p>
             <div class="d-flex gap-3 align-items-center me-5 flex-wrap">
                 <a href="#" class="footerBottomText">Terms of Use</a>

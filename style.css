@@ -6,6 +6,10 @@
   font-family: Poppins;
 }
 
+hr {
+  color: #3e8847;
+}
+
 .greenButton {
   background-color: #09270d !important;
   color: white !important;
@@ -43,10 +47,14 @@ a {
   color: #727272;
 }
 
+.sectionGap {
+  margin-top: 50px;
+}
+
 .brandName {
   font-family: Playfair;
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #3e8847;
 }
 
@@ -76,7 +84,8 @@ a {
   width: 20px;
 }
 
-.addUser:hover, .bag:hover {
+.addUser:hover,
+.bag:hover {
   cursor: pointer;
 }
 
@@ -87,28 +96,40 @@ a {
   color: #3e8847;
 }
 
-.heroContent {
-  top: 100px;
-  left: 0;
-  max-width: 400px;
-}
-
 .heroLeaf {
   left: 30px;
   top: -50px;
   height: 80px;
 }
 
-.sliderContainer {
-  overflow-x: scroll;
-  max-width: 1000px;
-}
-.sliderContainer::-webkit-scrollbar {
-  display: none;
-}
 .sliderContainer img {
-  margin-top: 60px;
-  width: 700px;
+  min-width: 80%;
+  width: 100%;
+  height: 38rem;
+}
+
+.heroCarouselImage {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.heroCarouselButton {
+  margin-left: 7rem;
+}
+
+.heroSlider {
+  display: inline-block;
+  width: 3.5rem;
+  height: 0.2rem;
+  background-color: #92b896;
+}
+
+.heroSliderSelected {
+  background-color: #3e8847;
+}
+
+.heroContainer {
+  flex-direction: column;
 }
 
 .collectionImageHeading {
@@ -118,20 +139,21 @@ a {
   color: #09270d;
 }
 
-.collectionContent div {
-  display: flex;
-  flex-direction: column;
-}
 .collectionContent div::-webkit-scrollbar {
   display: none;
 }
 
 .plantCollectionImage {
-  height: 350px;
+  height: 24rem;
+  width: 18rem;
 }
 .plantCollectionImage img {
   width: 100%;
   height: 100%;
+}
+
+.plantCollectionCarousel div {
+  flex-shrink: 0;
 }
 
 .carouselMover {
@@ -246,7 +268,68 @@ a {
   color: white;
 }
 
+.clientCard {
+  width: 20rem;
+}
+.clientCard .quoteWhite {
+  display: none;
+}
+.clientCard:hover {
+  cursor: pointer;
+  background-color: #3e8847;
+}
+.clientCard:hover .quoteGreen {
+  display: none;
+}
+.clientCard:hover .quoteWhite {
+  display: block;
+}
+.clientCard:hover p {
+  color: white;
+}
+
+.clientCardImage {
+  width: 5rem;
+  height: 5rem;
+}
+.clientCardImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.playButton {
+  display: none;
+}
+
+.openQuote {
+  width: 2rem;
+  top: 6rem;
+  left: 1.5rem;
+}
+
+.closeQuote {
+  width: 2.5rem;
+  bottom: -2rem;
+  right: 2rem;
+}
+
+.clientCardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.clientTalkCard {
+  transition: transform 0.6s ease;
+}
+
 .plantCareImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.plantCareLeaves {
+  width: 7rem;
+}
+.plantCareLeaves img {
   width: 100%;
   height: 100%;
 }
@@ -273,7 +356,7 @@ a {
   font-family: poppins;
   font-size: 0.8rem;
   font-weight: 500;
-  color: #B0BAA3;
+  color: #b0baa3;
 }
 
 .footerSocialMedia img:hover {
@@ -281,11 +364,12 @@ a {
 }
 
 @media (min-width: 576px) {
-  .heroContent {
-    left: 75px;
+  .sectionGap {
+    margin-top: 100px;
   }
   .plantCollectionImage {
-    height: 460px;
+    height: 28rem;
+    width: 24rem;
   }
   .journeyPlant {
     height: 600px;
@@ -310,6 +394,32 @@ a {
     padding: 60px;
   }
 }
+@media (min-width: 768px) {
+  .clientCard {
+    width: 40rem;
+  }
+  .openQuote {
+    width: 2rem;
+    top: 1rem;
+    left: 5rem;
+  }
+  .clientCardImage {
+    width: 23rem;
+    height: 7rem;
+    margin: auto;
+    margin-left: -3rem !important;
+  }
+  .clientCardImage img {
+    width: 100%;
+    height: 100%;
+  }
+  .playButton {
+    display: block;
+  }
+  .playButton:hover {
+    cursor: pointer;
+  }
+}
 @media (min-width: 998px) {
   .journeyContent {
     margin-top: 6rem !important;
@@ -329,10 +439,27 @@ a {
     display: block;
   }
   .plantCareContent {
-    margin-left: 7rem;
+    margin-left: 4rem;
   }
   .plantCareLeaves {
     left: 16rem;
     bottom: -4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .heroContainer {
+    flex-direction: row;
+  }
+  .heroContent {
+    width: 80rem;
+    margin-right: -5rem;
+    margin-left: 6rem;
+  }
+  .sliderContainer img {
+    min-width: 80%;
+  }
+  .heroCarouselButton {
+    margin-top: -2rem;
+    margin-left: 7rem;
   }
 }/*# sourceMappingURL=style.css.map */
