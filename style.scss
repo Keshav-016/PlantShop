@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$lightGreen: #3e8847;
+$darkGreen: #09270d;
+$contentColor: #727272;
+$inputText: #c0c0c0;
+$brandColor: #7d807e;
 
 * {
   margin: 0;
@@ -17,41 +23,45 @@
 }
 // -------------------------------------------
 hr {
-  color: #3e8847;
+  color: $lightGreen;
 }
+
 .greenButton {
-  background-color: #09270d !important;
+  background-color: $darkGreen !important;
   color: white !important;
 }
+
 a {
   text-decoration: none;
 }
-@include fontDesign(sectionHeading, Playfair, 2.5rem, 700, #09270d);
-@include fontDesign(cardHeading, Poppins, 1.5rem, 600, #09270d);
-@include fontDesign(cardContent, Poppins, 0.9rem, 500, #727272);
-@include fontDesign(content, Playfair, 1.2rem, 500, #727272);
+
+@include fontDesign(sectionHeading, Playfair, 2.5rem, 700, $darkGreen);
+@include fontDesign(cardHeading, Poppins, 1.5rem, 600, $darkGreen);
+@include fontDesign(cardContent, Poppins, 0.9rem, 500, $contentColor);
+@include fontDesign(content, Playfair, 1.2rem, 500, $contentColor);
+
 .sectionGap {
   margin-top: 50px;
 }
 
 // navbar section
-@include fontDesign(brandName, Playfair, 1.7rem, 500, #3e8847);
+@include fontDesign(brandName, Playfair, 1.7rem, 500, $lightGreen);
 
 .brandNameGray {
-  color: #7d807e !important;
+  color: $brandColor !important;
 }
 
 .navbarLink {
   li {
     a {
-      color: #09270d !important;
+      color: $darkGreen !important;
     }
   }
 }
 
 .searchBox {
   &::placeholder {
-    color: #c0c0c0;
+    color: $inputText;
     font-size: 0.8rem;
   }
   outline: none !important;
@@ -72,7 +82,7 @@ a {
 
 // hero section
 
-@include fontDesign(heroHeading, Playfair, 4rem, 500, #3e8847);
+@include fontDesign(heroHeading, Playfair, 4rem, 500, $lightGreen);
 
 .heroLeaf {
   left: 30px;
@@ -82,19 +92,15 @@ a {
 
 .sliderContainer {
   img {
-    min-width: 80%;
+    min-width: 100%;
     width: 100%;
-    height: 38rem;
+    height: 32rem;
   }
 }
 
 .heroCarouselImage {
   transition: all 0.3s ease;
   border-radius: 20px;
-}
-
-.heroCarouselButton {
-  margin-left: 7rem;
 }
 
 .heroSlider {
@@ -105,7 +111,7 @@ a {
 }
 
 .heroSliderSelected {
-  background-color: #3e8847;
+  background-color: $lightGreen;
 }
 
 .heroContainer {
@@ -114,7 +120,7 @@ a {
 
 // plant collection section
 
-@include fontDesign(collectionImageHeading, Playfair, 1.3rem, 600, #09270d);
+@include fontDesign(collectionImageHeading, Playfair, 1.3rem, 600, $darkGreen);
 
 .collectionContent {
   div {
@@ -140,7 +146,7 @@ a {
 }
 
 .carouselMover {
-  border: 0.5px solid #09270d;
+  border: 0.5px solid $darkGreen;
   border-radius: 50%;
   font-size: 25px;
   &:hover {
@@ -233,7 +239,7 @@ a {
   border-radius: 50%;
   width: 4.2rem;
   height: 4.2rem;
-  background-color: #3e8847;
+  background-color: $lightGreen;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,7 +263,7 @@ a {
     .choosingCardFont {
       color: white;
     }
-    background-color: #3e8847;
+    background-color: $lightGreen;
   }
 }
 // client talk section
@@ -268,7 +274,7 @@ a {
   }
   &:hover {
     cursor: pointer;
-    background-color: #3e8847;
+    background-color: $lightGreen;
     .quoteGreen {
       display: none;
     }
@@ -312,7 +318,7 @@ a {
   }
 }
 
-.clientTalkCard{
+.clientTalkCard {
   transition: transform 0.6s ease;
 }
 
@@ -360,6 +366,10 @@ a {
   .plantCollectionImage {
     height: 28rem;
     width: 24rem;
+    transition: transform 9sec ease;
+    &:hover{
+      transform: rotate(3deg);
+    }
   }
 
   // journey section
@@ -396,6 +406,11 @@ a {
 }
 
 @media (min-width: 768px) {
+  // hero section
+  .heroCarouselButton {
+    margin-left: 7rem;
+  }
+
   .clientCard {
     width: 40rem;
   }
@@ -464,11 +479,13 @@ a {
   .heroContainer {
     flex-direction: row;
   }
+
   .heroContent {
-    width: 80rem;
+    width: 50rem;
     margin-right: -5rem;
     margin-left: 6rem;
   }
+
   .sliderContainer {
     img {
       min-width: 80%;

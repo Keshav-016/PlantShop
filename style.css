@@ -103,18 +103,14 @@ a {
 }
 
 .sliderContainer img {
-  min-width: 80%;
+  min-width: 100%;
   width: 100%;
-  height: 38rem;
+  height: 32rem;
 }
 
 .heroCarouselImage {
   transition: all 0.3s ease;
   border-radius: 20px;
-}
-
-.heroCarouselButton {
-  margin-left: 7rem;
 }
 
 .heroSlider {
@@ -370,6 +366,10 @@ a {
   .plantCollectionImage {
     height: 28rem;
     width: 24rem;
+    transition: transform 9sec ease;
+  }
+  .plantCollectionImage:hover {
+    transform: rotate(3deg);
   }
   .journeyPlant {
     height: 600px;
@@ -395,6 +395,9 @@ a {
   }
 }
 @media (min-width: 768px) {
+  .heroCarouselButton {
+    margin-left: 7rem;
+  }
   .clientCard {
     width: 40rem;
   }
@@ -451,7 +454,7 @@ a {
     flex-direction: row;
   }
   .heroContent {
-    width: 80rem;
+    width: 50rem;
     margin-right: -5rem;
     margin-left: 6rem;
   }

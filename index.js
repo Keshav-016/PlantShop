@@ -9,7 +9,6 @@ const clientCard = document.querySelectorAll('.clientTalkCard');
 let heroCurrentIndex = 0;
 let clientCardIndex = 0;
 
-
 const heroImageAddress = [
     {
         img: "./images/heroSection/plant.png"
@@ -19,9 +18,6 @@ const heroImageAddress = [
     },
     {
         img: "./images/heroSection/greenLeave.avif"
-    },
-    {
-        img: "./images/heroSection/longGrass.avif"
     },
 ];
 
@@ -44,6 +40,17 @@ const plantCollectionData = [
     },
 ];
 
+function handleResize() {
+    if (window.innerWidth > 998) {
+        heroCarouselImage[heroCurrentIndex].style.marginRight = `-80px`;
+    } else {
+        heroCarouselImage[heroCurrentIndex].style.marginRight = '0';
+    }
+}
+
+window.addEventListener('resize', () => {
+    handleResize();
+});
 function updateHeroCarousel(heroCarouselImage, heroCurrentIndex) {
     heroCarouselImage.forEach((item) => {
         item.style.height = "38rem";
@@ -51,7 +58,7 @@ function updateHeroCarousel(heroCarouselImage, heroCurrentIndex) {
         item.style.marginRight = `0`;
         item.style.zIndex = 0;
     });
-    heroCarouselImage[heroCurrentIndex].style.marginRight = `-80px`;
+    handleResize();
     heroCarouselImage[heroCurrentIndex].style.height = "32rem";
     heroCarouselImage[heroCurrentIndex].style.zIndex = 2;
 }
@@ -68,17 +75,17 @@ const heroCarouselImage = document.querySelectorAll('.heroCarouselImage')
 updateHeroCarousel(heroCarouselImage, heroCurrentIndex);
 
 heroRightSlider.addEventListener('click', () => {
-    heroSlider[heroCurrentIndex].style.backgroundColor="#92B896"
+    heroSlider[heroCurrentIndex].style.backgroundColor = "#92B896"
     heroCurrentIndex = (heroCurrentIndex + 1) % heroImageAddress.length;
-    heroSlider[heroCurrentIndex].style.backgroundColor="#3E8646"
+    heroSlider[heroCurrentIndex].style.backgroundColor = "#3E8646"
     updateHeroCarousel(heroCarouselImage, heroCurrentIndex)
 })
 
 heroLeftSlider.addEventListener('click', () => {
+    heroSlider[heroCurrentIndex].style.backgroundColor = "#92B896";
     heroCurrentIndex = (heroCurrentIndex - 1 + heroImageAddress.length) % heroImageAddress.length;
-    heroSlider[heroCurrentIndex].style.backgroundColor="#92B896";
+    heroSlider[heroCurrentIndex].style.backgroundColor = "#3E8646";
     updateHeroCarousel(heroCarouselImage, heroCurrentIndex);
-    heroSlider[heroCurrentIndex].style.backgroundColor="#3E8646";
 })
 
 function createPlantCarousel() {
@@ -100,13 +107,6 @@ function createPlantCarousel() {
 
 createPlantCarousel()
 
-setInterval(() => {
-    clientCard.forEach((item)=>{
-        item.style.transform=`translateX(-${100 * clientCardIndex}%)`;
-    })
-    clientCardIndex = (clientCardIndex+1) % 3;
-}, 2000)
-
 plantCarouselBackward.addEventListener('click', (item) => {
     let lastImage = plantCollectionData.shift();
     plantCollectionData.push(lastImage);
@@ -120,3 +120,10 @@ plantCarouselForward.addEventListener('click', (item) => {
     plantCollectionContainer.innerHTML = '';
     createPlantCarousel();
 })
+
+setInterval(() => {
+    clientCard.forEach((item) => {
+        item.style.transform = `translateX(-${100 * clientCardIndex}%)`;
+    })
+    clientCardIndex = (clientCardIndex + 1) % 3;
+}, 2000)
