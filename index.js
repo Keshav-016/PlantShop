@@ -62,13 +62,11 @@ window.addEventListener('resize', () => {
 
 function updateHeroCarousel(heroCarouselImage, heroCurrentIndex) {
     heroCarouselImage.forEach((item) => {
-        // item.style.height = window.innerWidth > 998 ? "38rem" : "100%";
         item.style.transform = `translateX(-${100 * heroCurrentIndex}%)`;
         item.style.marginRight = `0`;
         item.style.zIndex = 0;
     });
     handleResizeHero();
-    // heroCarouselImage[heroCurrentIndex].style.height = "32rem";
     heroCarouselImage[heroCurrentIndex].style.zIndex = 2;
 }
 
