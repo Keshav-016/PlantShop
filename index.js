@@ -128,9 +128,9 @@ plantCarouselForward.addEventListener('click', (item) => {
     createPlantCarousel();
 })
 
-// setInterval(() => {
-//     clientCard.forEach((item) => {
-//         item.style.transform = `translateX(-${100 * clientCardIndex}%)`;
-//     })
-//     clientCardIndex = (clientCardIndex + 1) % 3;
-// }, 2000)
+setInterval(() => {
+    clientCard.forEach((item) => {
+        item.style.transform = `translateX(-${100 * clientCardIndex}%)`;
+    })
+    clientCardIndex = (clientCardIndex + 1) % 3;
+}, 2000)
