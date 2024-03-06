@@ -41,13 +41,14 @@ const plantCollectionData = [
 ];
 
 function handleResizeHero() {
-    if (window.innerWidth >= 1200) {
+    if (window.innerWidth >= 992) {
         heroCarouselImage[heroCurrentIndex].style.marginRight = `-80px`;
         heroCarouselImage.forEach((item) => {
             item.style.height = "38rem"
         });
         heroCarouselImage[heroCurrentIndex].style.height = "32rem";
-    } else {
+    } 
+    else {
         heroCarouselImage[heroCurrentIndex].style.marginRight = '0';
         heroCarouselImage.forEach((item) => {
             item.style.height = "100%"

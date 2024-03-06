@@ -63,7 +63,7 @@ a {
 }
 
 .navbarLink li {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #F8F9FA;
 }
 .navbarLink li a {
   color: #09270d !important;
@@ -122,7 +122,7 @@ a {
 
 .heroSlider {
   display: inline-block;
-  width: 3.5rem;
+  width: 1.8rem;
   height: 0.2rem;
   background-color: #92b896;
 }
@@ -272,7 +272,8 @@ a {
 }
 
 .clientCard {
-  width: 20rem;
+  width: 100%;
+  box-shadow: 0 0 5px rgb(218, 218, 218);
 }
 .clientCard .quoteWhite {
   display: none;
@@ -306,14 +307,14 @@ a {
 
 .openQuote {
   width: 2rem;
-  top: 6rem;
+  top: 5.8rem;
   left: 1.5rem;
 }
 
 .closeQuote {
   width: 2.5rem;
-  bottom: -2rem;
-  right: 2rem;
+  bottom: -2.3rem;
+  right: 1rem;
 }
 
 .clientCardContainer::-webkit-scrollbar {
@@ -321,6 +322,7 @@ a {
 }
 
 .clientTalkCard {
+  min-width: 100%;
   transition: transform 0.6s ease;
 }
 
@@ -430,22 +432,28 @@ a {
   .formContainer {
     padding: 60px;
   }
+  .clientCard {
+    width: 15rem;
+  }
+  .clientTalkCard {
+    min-width: unset;
+  }
 }
 @media (min-width: 768px) {
-  .heroCarouselButton {
-    margin-left: 7rem;
-  }
   .clientCard {
-    width: 40rem;
+    width: 32rem;
   }
   .openQuote {
-    width: 2rem;
-    top: 1rem;
-    left: 5rem;
+    top: 0.7rem;
+    left: 4rem;
+  }
+  .closeQuote {
+    bottom: -1.3rem;
+    right: 3rem;
   }
   .clientCardImage {
     width: 23rem;
-    height: 7rem;
+    height: 6rem;
     margin: auto;
     margin-left: -3rem !important;
   }
@@ -460,7 +468,11 @@ a {
     cursor: pointer;
   }
 }
-@media (min-width: 998px) {
+@media (min-width: 992px) {
+  .sliderContainer img {
+    padding: 0;
+    min-width: 80%;
+  }
   .journeyContent {
     margin-top: 6rem !important;
     max-width: 500px;
@@ -487,17 +499,13 @@ a {
   }
 }
 @media (min-width: 1200px) {
-  .heroContainer {
-    flex-direction: row;
-  }
   .heroContent {
     width: 50rem;
     margin-right: -5rem;
     margin-left: 6rem;
   }
-  .sliderContainer img {
-    padding: 0;
-    min-width: 80%;
+  .heroContainer {
+    flex-direction: row;
   }
   .heroCarouselButton {
     margin-top: -2rem;
