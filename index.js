@@ -40,26 +40,35 @@ const plantCollectionData = [
     },
 ];
 
-function handleResize() {
-    if (window.innerWidth > 998) {
+function handleResizeHero() {
+    if (window.innerWidth >= 1200) {
         heroCarouselImage[heroCurrentIndex].style.marginRight = `-80px`;
+        heroCarouselImage.forEach((item) => {
+            item.style.height = "38rem"
+        });
+        heroCarouselImage[heroCurrentIndex].style.height = "32rem";
     } else {
         heroCarouselImage[heroCurrentIndex].style.marginRight = '0';
+        heroCarouselImage.forEach((item) => {
+            item.style.height = "100%"
+        });
+        heroCarouselImage[heroCurrentIndex].style.height = "100%";
     }
 }
 
 window.addEventListener('resize', () => {
-    handleResize();
+    handleResizeHero();
 });
+
 function updateHeroCarousel(heroCarouselImage, heroCurrentIndex) {
     heroCarouselImage.forEach((item) => {
-        item.style.height = "38rem";
+        // item.style.height = window.innerWidth > 998 ? "38rem" : "100%";
         item.style.transform = `translateX(-${100 * heroCurrentIndex}%)`;
         item.style.marginRight = `0`;
         item.style.zIndex = 0;
     });
-    handleResize();
-    heroCarouselImage[heroCurrentIndex].style.height = "32rem";
+    handleResizeHero();
+    // heroCarouselImage[heroCurrentIndex].style.height = "32rem";
     heroCarouselImage[heroCurrentIndex].style.zIndex = 2;
 }
 
