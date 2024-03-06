@@ -17,7 +17,7 @@ const heroImageAddress = [
         img: "./images/heroSection/leave.avif"
     },
     {
-        img: "./images/heroSection/greenLeave.avif"
+        img: "./images/heroSection/greenLeave.jpg"
     },
 ];
 

@@ -56,6 +56,10 @@ a {
   margin-top: 50px;
 }
 
+button{
+  font-size: 0.8rem !important;
+}
+
 // navbar section
 @include fontDesign(brandName, Playfair, 1.7rem, 500, $lightGreen);
 
@@ -176,10 +180,6 @@ a {
   height: 500px;
   width: 315px;
   @include image();
-}
-
-.journeyContent {
-  max-width: 100%;
 }
 
 .journeySidePlant {
@@ -359,6 +359,9 @@ a {
   .sectionGap {
     margin-top: 100px;
   }
+  button{
+    font-size: 1rem !important;
+  }
   @include fontDesign(sectionHeading, Playfair, 2.5rem, 700, $darkGreen);
   @include fontDesign(cardHeading, Poppins, 1.5rem, 600, $darkGreen);
   @include fontDesign(cardContent, Poppins, 0.9rem, 500, $contentColor);
@@ -419,6 +422,13 @@ a {
 }
 
 @media (min-width: 768px) {
+
+  // journey section
+
+  .journeyContent {
+    width: calc(100% - 400px);
+  }
+  
   // client section
 
   .clientCard {

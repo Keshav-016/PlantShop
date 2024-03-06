@@ -51,6 +51,10 @@ a {
   margin-top: 50px;
 }
 
+button {
+  font-size: 0.8rem !important;
+}
+
 .brandName {
   font-family: Playfair;
   font-size: 1.7rem;
@@ -177,10 +181,6 @@ a {
 .journeyPlant img {
   width: 100%;
   height: 100%;
-}
-
-.journeyContent {
-  max-width: 100%;
 }
 
 .journeySidePlant {
@@ -372,6 +372,9 @@ a {
   .sectionGap {
     margin-top: 100px;
   }
+  button {
+    font-size: 1rem !important;
+  }
   .sectionHeading {
     font-family: Playfair;
     font-size: 2.5rem;
@@ -440,6 +443,9 @@ a {
   }
 }
 @media (min-width: 768px) {
+  .journeyContent {
+    width: calc(100% - 400px);
+  }
   .clientCard {
     width: 32rem;
   }
